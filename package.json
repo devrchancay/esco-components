@@ -15,7 +15,9 @@
     "storybook": "start-storybook -p 6006",
     "storybook:export": "build-storybook",
     "generate": "node ./util/create-component",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -73,6 +75,8 @@
   },
   "dependencies": {
     "styled-components": "^5.1.1",
-    "typescript-plugin-styled-components": "^1.4.4"
-  }
+    "typescript-plugin-styled-components": "^1.4.4",
+    "@snyk/protect": "latest"
+  },
+  "snyk": true
 }
